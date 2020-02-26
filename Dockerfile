@@ -1,4 +1,4 @@
-FROM ubuntu AS base
+FROM i386/ubuntu AS base
 
 ENV VERSION="1.8.12"
 
@@ -13,7 +13,7 @@ RUN apt-get update && apt-get -yq install \
 
 WORKDIR /opt
 
-RUN curl https://downloads.arduino.cc/arduino-$VERSION-linux64.tar.xz \
+RUN curl https://downloads.arduino.cc/arduino-$VERSION-linux32.tar.xz \
   | unxz \
   | tar --extract \
  && mv arduino-$VERSION arduino \
