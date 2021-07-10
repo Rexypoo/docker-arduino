@@ -1,6 +1,6 @@
 FROM ubuntu AS base
 
-ENV VERSION="1.8.12"
+ENV VERSION="1.8.15"
 
 RUN apt-get update && apt-get -yq install \
     curl \
